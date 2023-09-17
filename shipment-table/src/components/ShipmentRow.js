@@ -1,13 +1,6 @@
-/**
- * {
- *    orderNo : int
- *    orderDate : Date
- *    customer : string
- *    trackingNo : string
- *    Status : enum
- *    consignee : string
- * }
- */
+import * as React from 'react';
+import ShipmentDetails from './ShipmentDetails';
+
 function ShipmentRow({ shipmentData }){
     return (
         <tr>
@@ -17,6 +10,9 @@ function ShipmentRow({ shipmentData }){
             <td>{shipmentData.trackingNo}</td>
             <td>{shipmentData.status}</td>
             <td>{shipmentData.consignee}</td>
+            <td>
+                <ShipmentDetails shipmentData={shipmentData}/>
+            </td>
         </tr>
     )
 }
