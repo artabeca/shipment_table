@@ -1,19 +1,21 @@
 import * as React from 'react';
 import ShipmentDetails from './ShipmentDetails';
+import TableRow from '@mui/material/TableRow';
+import TableCell from '@mui/material/TableCell';
 
 function ShipmentRow({ shipmentData }){
     return (
-        <tr>
-            <td>{shipmentData.orderNo}</td>
-            <td>{shipmentData.date}</td>
-            <td>{shipmentData.customer}</td>
-            <td>{shipmentData.trackingNo}</td>
-            <td>{shipmentData.status}</td>
-            <td>{shipmentData.consignee}</td>
-            <td>
+        <TableRow sx={{ '&:last-child TableCell, &:last-child th': { border: 0 } }}>
+            <TableCell>{shipmentData.orderNo}</TableCell>
+            <TableCell>{shipmentData.date}</TableCell>
+            <TableCell>{shipmentData.customer}</TableCell>
+            <TableCell>{shipmentData.trackingNo}</TableCell>
+            <TableCell>{shipmentData.status}</TableCell>
+            <TableCell>{shipmentData.consignee}</TableCell>
+            <TableCell>
                 <ShipmentDetails shipmentData={shipmentData}/>
-            </td>
-        </tr>
+            </TableCell>
+        </TableRow>
     )
 }
 
