@@ -30,7 +30,7 @@ export default function ShipmentDetails({shipmentData}) {
           <DialogContentText>
             <Grid container spacing={3}>
                 <Grid item xs={6}>
-                    <p>ORDERNO</p>
+                    <p>ORDER NO</p>
                     <Box component="div" sx={{ p: 2, border: '1px solid rgba(0, 0, 0, 0.05)' }}>
                         {shipmentData.orderNo}
                     </Box>
@@ -48,7 +48,7 @@ export default function ShipmentDetails({shipmentData}) {
                     </Box>
                 </Grid>
                 <Grid item xs={6}>
-                    <p>TRACKINGNO</p>
+                    <p>TRACKING NO</p>
                     <Box component="div" sx={{ p: 2, border: '1px solid rgba(0, 0, 0, 0.05)' }}>
                         {shipmentData.trackingNo}
                     </Box>
